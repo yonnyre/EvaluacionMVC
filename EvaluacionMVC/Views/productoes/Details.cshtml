@@ -1,0 +1,57 @@
+﻿@model EvaluacionMVC.Models.producto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fVencimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fVencimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.unidades)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unidades)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categoria.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categoria.nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idProducto }) |
+    @Html.ActionLink("Salir", "Index")
+</p>

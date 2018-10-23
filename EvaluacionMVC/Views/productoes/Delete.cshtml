@@ -1,0 +1,63 @@
+﻿@model EvaluacionMVC.Models.producto
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Esta seguro que quieres eliminar este producto?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fVencimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fVencimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.unidades)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unidades)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categoria.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categoria.nombre)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Salir", "Index")
+        </div>
+    }
+</div>
